@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestForm));
             this.textBoxFromEnglish = new System.Windows.Forms.TextBox();
             this.textBoxToRussian = new System.Windows.Forms.TextBox();
             this.buttonShowRussian = new System.Windows.Forms.Button();
@@ -207,6 +208,7 @@
             this.Controls.Add(this.textBoxFromEnglish);
             this.Controls.Add(this.textBoxToRussian);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TestForm";
