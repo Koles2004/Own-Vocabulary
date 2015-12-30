@@ -10,10 +10,10 @@ You can choose 4 options: all words, only verbs, except verbs, only phrasal verb
 I write verbs to my vocabulary with "To". E.g. "To sleep".
 
 So, if you check the option "only verbs", you will get all words from your Database,
-whick starts of "To " (with 1 space).
+which starts of "To " (with 1 space).
 
 So, if you check the option "except verbs", you will get all words from your Database,
-whick don't start of "To " (with 1 space).
+which don't start of "To " (with 1 space).
 
 So, if you check the option "only phrasal verbs", you will get all words from your Database,
-whick starts of "To " (with 1 space) and have at least 3 words. E. g. "To turn into".
+which starts of "To " (with 1 space) and have at least 3 words. E. g. "To turn into".
