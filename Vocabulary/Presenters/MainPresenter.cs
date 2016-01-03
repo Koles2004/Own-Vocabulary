@@ -147,6 +147,9 @@ namespace Vocabulary.Presenters
 
         private void OnTranslate(object sender, EventArgs e)
         {
+            if (View.ListView.SelectedIndices.Count != 0)
+                View.ListView.SelectedIndices.Clear();
+
             if (View.EnglishWord.Length == 0)
                 return;
 
