@@ -109,6 +109,60 @@ namespace Vocabulary.Presenters
                 flag = false;
             }
 
+            if (View.RadioButtonOnlyVerbGet.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To get ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbLook.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To look ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbBe.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To be ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbKeep.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To keep ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbPut.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To put ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbTurn.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To turn ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbGo.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To go ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbMake.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To make ")).ToList();
+                flag = false;
+            }
+
+            if (View.RadioButtonOnlyVerbTake.Checked)
+            {
+                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
+                flag = false;
+            }
+
             if (flag)
                 words = wordsfromDB;
 

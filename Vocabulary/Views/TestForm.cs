@@ -13,6 +13,15 @@ namespace Vocabulary.Views
         public RadioButton RadioButtonOnlyVerbs { get { return radioButtonOnlyVerbs; } }
         public RadioButton RadioButtonOnlyPhrasalVerbs { get { return radioButtonOnlyPhrasalVerbs; } }
         public RadioButton RadioButtonExceptVerbs { get { return radioButtonExceptVerbs; } }
+        public RadioButton RadioButtonOnlyVerbGet { get { return radioButtonOnlyVerbGet; } }
+        public RadioButton RadioButtonOnlyVerbLook { get { return radioButtonOnlyVerbLook; } }
+        public RadioButton RadioButtonOnlyVerbBe { get { return radioButtonOnlyVerbBe; } }
+        public RadioButton RadioButtonOnlyVerbKeep { get { return radioButtonOnlyVerbKeep; } }
+        public RadioButton RadioButtonOnlyVerbPut { get { return radioButtonOnlyVerbPut; } }
+        public RadioButton RadioButtonOnlyVerbTurn { get { return radioButtonOnlyVerbTurn; } }
+        public RadioButton RadioButtonOnlyVerbGo { get { return radioButtonOnlyVerbGo; } }
+        public RadioButton RadioButtonOnlyVerbMake { get { return radioButtonOnlyVerbMake; } }
+        public RadioButton RadioButtonOnlyVerbTake { get { return radioButtonOnlyVerbTake; } }
 
         public string EnglishWordForTest
         {

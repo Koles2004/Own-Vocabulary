@@ -42,6 +42,15 @@
             this.radioButtonOnlyVerbs = new System.Windows.Forms.RadioButton();
             this.buttonExit = new System.Windows.Forms.Button();
             this.radioButtonOnlyPhrasalVerbs = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbPut = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbTurn = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbGo = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbMake = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbTake = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbBe = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbKeep = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbLook = new System.Windows.Forms.RadioButton();
+            this.radioButtonOnlyVerbGet = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // textBoxFromEnglish
@@ -90,7 +99,7 @@
             // 
             this.textBoxToEnglish.BackColor = System.Drawing.Color.White;
             this.textBoxToEnglish.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxToEnglish.Location = new System.Drawing.Point(30, 275);
+            this.textBoxToEnglish.Location = new System.Drawing.Point(30, 391);
             this.textBoxToEnglish.Name = "textBoxToEnglish";
             this.textBoxToEnglish.ReadOnly = true;
             this.textBoxToEnglish.Size = new System.Drawing.Size(364, 26);
@@ -100,7 +109,7 @@
             // 
             this.textBoxFromRussian.BackColor = System.Drawing.Color.White;
             this.textBoxFromRussian.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxFromRussian.Location = new System.Drawing.Point(30, 225);
+            this.textBoxFromRussian.Location = new System.Drawing.Point(30, 341);
             this.textBoxFromRussian.Name = "textBoxFromRussian";
             this.textBoxFromRussian.ReadOnly = true;
             this.textBoxFromRussian.Size = new System.Drawing.Size(364, 26);
@@ -109,7 +118,7 @@
             // buttonShowEnglish
             // 
             this.buttonShowEnglish.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonShowEnglish.Location = new System.Drawing.Point(274, 319);
+            this.buttonShowEnglish.Location = new System.Drawing.Point(274, 448);
             this.buttonShowEnglish.Name = "buttonShowEnglish";
             this.buttonShowEnglish.Size = new System.Drawing.Size(120, 62);
             this.buttonShowEnglish.TabIndex = 23;
@@ -120,7 +129,7 @@
             // buttonRussianWord
             // 
             this.buttonRussianWord.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRussianWord.Location = new System.Drawing.Point(30, 319);
+            this.buttonRussianWord.Location = new System.Drawing.Point(30, 448);
             this.buttonRussianWord.Name = "buttonRussianWord";
             this.buttonRussianWord.Size = new System.Drawing.Size(120, 62);
             this.buttonRussianWord.TabIndex = 22;
@@ -169,7 +178,7 @@
             // buttonExit
             // 
             this.buttonExit.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit.Location = new System.Drawing.Point(496, 319);
+            this.buttonExit.Location = new System.Drawing.Point(496, 448);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(120, 62);
             this.buttonExit.TabIndex = 27;
@@ -181,7 +190,7 @@
             // 
             this.radioButtonOnlyPhrasalVerbs.AutoSize = true;
             this.radioButtonOnlyPhrasalVerbs.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButtonOnlyPhrasalVerbs.Location = new System.Drawing.Point(449, 127);
+            this.radioButtonOnlyPhrasalVerbs.Location = new System.Drawing.Point(449, 125);
             this.radioButtonOnlyPhrasalVerbs.Name = "radioButtonOnlyPhrasalVerbs";
             this.radioButtonOnlyPhrasalVerbs.Size = new System.Drawing.Size(167, 22);
             this.radioButtonOnlyPhrasalVerbs.TabIndex = 28;
@@ -189,11 +198,128 @@
             this.radioButtonOnlyPhrasalVerbs.UseVisualStyleBackColor = true;
             this.radioButtonOnlyPhrasalVerbs.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
             // 
+            // radioButtonOnlyVerbPut
+            // 
+            this.radioButtonOnlyVerbPut.AutoSize = true;
+            this.radioButtonOnlyVerbPut.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbPut.Location = new System.Drawing.Point(449, 275);
+            this.radioButtonOnlyVerbPut.Name = "radioButtonOnlyVerbPut";
+            this.radioButtonOnlyVerbPut.Size = new System.Drawing.Size(142, 22);
+            this.radioButtonOnlyVerbPut.TabIndex = 46;
+            this.radioButtonOnlyVerbPut.Text = "Only verb \"Put\"";
+            this.radioButtonOnlyVerbPut.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbPut.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbTurn
+            // 
+            this.radioButtonOnlyVerbTurn.AutoSize = true;
+            this.radioButtonOnlyVerbTurn.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbTurn.Location = new System.Drawing.Point(449, 305);
+            this.radioButtonOnlyVerbTurn.Name = "radioButtonOnlyVerbTurn";
+            this.radioButtonOnlyVerbTurn.Size = new System.Drawing.Size(151, 22);
+            this.radioButtonOnlyVerbTurn.TabIndex = 45;
+            this.radioButtonOnlyVerbTurn.Text = "Only verb \"Turn\"";
+            this.radioButtonOnlyVerbTurn.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbTurn.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbGo
+            // 
+            this.radioButtonOnlyVerbGo.AutoSize = true;
+            this.radioButtonOnlyVerbGo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbGo.Location = new System.Drawing.Point(449, 335);
+            this.radioButtonOnlyVerbGo.Name = "radioButtonOnlyVerbGo";
+            this.radioButtonOnlyVerbGo.Size = new System.Drawing.Size(137, 22);
+            this.radioButtonOnlyVerbGo.TabIndex = 44;
+            this.radioButtonOnlyVerbGo.Text = "Only verb \"Go\"";
+            this.radioButtonOnlyVerbGo.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbGo.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbMake
+            // 
+            this.radioButtonOnlyVerbMake.AutoSize = true;
+            this.radioButtonOnlyVerbMake.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbMake.Location = new System.Drawing.Point(449, 365);
+            this.radioButtonOnlyVerbMake.Name = "radioButtonOnlyVerbMake";
+            this.radioButtonOnlyVerbMake.Size = new System.Drawing.Size(157, 22);
+            this.radioButtonOnlyVerbMake.TabIndex = 43;
+            this.radioButtonOnlyVerbMake.Text = "Only verb \"Make\"";
+            this.radioButtonOnlyVerbMake.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbMake.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbTake
+            // 
+            this.radioButtonOnlyVerbTake.AutoSize = true;
+            this.radioButtonOnlyVerbTake.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbTake.Location = new System.Drawing.Point(449, 395);
+            this.radioButtonOnlyVerbTake.Name = "radioButtonOnlyVerbTake";
+            this.radioButtonOnlyVerbTake.Size = new System.Drawing.Size(153, 22);
+            this.radioButtonOnlyVerbTake.TabIndex = 42;
+            this.radioButtonOnlyVerbTake.Text = "Only verb \"Take\"";
+            this.radioButtonOnlyVerbTake.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbTake.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbBe
+            // 
+            this.radioButtonOnlyVerbBe.AutoSize = true;
+            this.radioButtonOnlyVerbBe.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbBe.Location = new System.Drawing.Point(449, 215);
+            this.radioButtonOnlyVerbBe.Name = "radioButtonOnlyVerbBe";
+            this.radioButtonOnlyVerbBe.Size = new System.Drawing.Size(136, 22);
+            this.radioButtonOnlyVerbBe.TabIndex = 41;
+            this.radioButtonOnlyVerbBe.Text = "Only verb \"Be\"";
+            this.radioButtonOnlyVerbBe.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbBe.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbKeep
+            // 
+            this.radioButtonOnlyVerbKeep.AutoSize = true;
+            this.radioButtonOnlyVerbKeep.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbKeep.Location = new System.Drawing.Point(449, 245);
+            this.radioButtonOnlyVerbKeep.Name = "radioButtonOnlyVerbKeep";
+            this.radioButtonOnlyVerbKeep.Size = new System.Drawing.Size(154, 22);
+            this.radioButtonOnlyVerbKeep.TabIndex = 40;
+            this.radioButtonOnlyVerbKeep.Text = "Only verb \"Keep\"";
+            this.radioButtonOnlyVerbKeep.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbKeep.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbLook
+            // 
+            this.radioButtonOnlyVerbLook.AutoSize = true;
+            this.radioButtonOnlyVerbLook.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbLook.Location = new System.Drawing.Point(449, 185);
+            this.radioButtonOnlyVerbLook.Name = "radioButtonOnlyVerbLook";
+            this.radioButtonOnlyVerbLook.Size = new System.Drawing.Size(153, 22);
+            this.radioButtonOnlyVerbLook.TabIndex = 39;
+            this.radioButtonOnlyVerbLook.Text = "Only verb \"Look\"";
+            this.radioButtonOnlyVerbLook.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbLook.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
+            // radioButtonOnlyVerbGet
+            // 
+            this.radioButtonOnlyVerbGet.AutoSize = true;
+            this.radioButtonOnlyVerbGet.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButtonOnlyVerbGet.Location = new System.Drawing.Point(449, 155);
+            this.radioButtonOnlyVerbGet.Name = "radioButtonOnlyVerbGet";
+            this.radioButtonOnlyVerbGet.Size = new System.Drawing.Size(143, 22);
+            this.radioButtonOnlyVerbGet.TabIndex = 38;
+            this.radioButtonOnlyVerbGet.Text = "Only verb \"Get\"";
+            this.radioButtonOnlyVerbGet.UseVisualStyleBackColor = true;
+            this.radioButtonOnlyVerbGet.CheckedChanged += new System.EventHandler(this.ChooseNeededWordsHandler);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 408);
+            this.ClientSize = new System.Drawing.Size(636, 539);
+            this.Controls.Add(this.radioButtonOnlyVerbPut);
+            this.Controls.Add(this.radioButtonOnlyVerbTurn);
+            this.Controls.Add(this.radioButtonOnlyVerbGo);
+            this.Controls.Add(this.radioButtonOnlyVerbMake);
+            this.Controls.Add(this.radioButtonOnlyVerbTake);
+            this.Controls.Add(this.radioButtonOnlyVerbBe);
+            this.Controls.Add(this.radioButtonOnlyVerbKeep);
+            this.Controls.Add(this.radioButtonOnlyVerbLook);
+            this.Controls.Add(this.radioButtonOnlyVerbGet);
             this.Controls.Add(this.radioButtonOnlyPhrasalVerbs);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.radioButtonAllWords);
@@ -235,5 +361,14 @@
         private System.Windows.Forms.RadioButton radioButtonOnlyVerbs;
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.RadioButton radioButtonOnlyPhrasalVerbs;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbPut;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbTurn;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbGo;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbMake;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbTake;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbBe;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbKeep;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbLook;
+        private System.Windows.Forms.RadioButton radioButtonOnlyVerbGet;
     }
 }
