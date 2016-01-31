@@ -13,6 +13,7 @@ namespace Vocabulary.Presenters
         private IMyVocabularyDomainModel Model { get; set; }
         readonly Random rand = new Random();
         private List<Word> words;
+        private long identifier;
 
         public TestPresenter(IMyVocabularyDomainModel domainModel, ITestView testView)
         {
@@ -33,6 +34,20 @@ namespace Vocabulary.Presenters
             try
             {
                 words = Model.WordRepository.GetAll().ToList();
+                View.ComboBoxWords.Items.Add("All words");
+                View.ComboBoxWords.Items.Add("Except verbs");
+                View.ComboBoxWords.Items.Add("Only verbs");
+                View.ComboBoxWords.Items.Add("Only phrasal verbs");
+                View.ComboBoxWords.Items.Add("Only verb \"Get\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Look\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Be\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Keep\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Put\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Turn\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Go\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Make\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Take\"");
+                View.ComboBoxWords.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -46,10 +61,7 @@ namespace Vocabulary.Presenters
             var index = rand.Next(0, words.Count);
             long id = 0;
 
-            for (int i = 0; i <= index; i++)
-            {
-                id = words[i].Id;
-            }
+            id = words[index].Id;
 
             View.EnglishWordForTest = words.Find(w => w.Id == id).EnglishWord;
 
@@ -60,7 +72,10 @@ namespace Vocabulary.Presenters
         {
             var str = View.EnglishWordForTest;
 
-            View.TranslationIntoRussian = words.Find(w => w.EnglishWord == str).Translation;
+            if (str != "")
+                View.TranslationIntoRussian = words.Find(w => w.EnglishWord == str).Translation;
+            else
+                MessageBox.Show("There is no English word", "Error");
         }
 
         private void OnChooseRussianWord(object sender, EventArgs e)
@@ -68,105 +83,72 @@ namespace Vocabulary.Presenters
             var index = rand.Next(0, words.Count);
             long id = 0;
 
-            for (int i = 0; i <= index; i++)
-            {
-                id = words[i].Id;
-            }
+            id = words[index].Id;
 
             View.RussianhWordForTest = words.Find(w => w.Id == id).Translation;
 
             View.TranslationIntoEnglish = "";
+
+            identifier = id;
         }
 
         private void OnShowEnglishWord(object sender, EventArgs e)
         {
-            var str = View.RussianhWordForTest;
-
-            View.TranslationIntoEnglish = words.Find(w => w.Translation == str).EnglishWord;
+            if (View.RussianhWordForTest != "")
+                View.TranslationIntoEnglish = words.Find(w => w.Id == identifier).EnglishWord;
+            else
+                MessageBox.Show("There is no Russian word", "Error");
         }
 
         private void GetWords(object sender, EventArgs e)
         {
             var wordsfromDB = Model.WordRepository.GetAll().ToList();
-            var flag = true;
 
-            if (View.RadioButtonOnlyVerbs.Checked)
+            switch (View.ComboBoxWords.SelectedItem.ToString())
             {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonExceptVerbs.Checked)
-            {
-                words = wordsfromDB.Where(w => !w.EnglishWord.StartsWith("To ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyPhrasalVerbs.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.Split().Length > 2).ToList()
+                case "Except verbs":
+                    words = wordsfromDB.Where(w => !w.EnglishWord.StartsWith("To ")).ToList();
+                    break;
+                case "Only verbs":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To ")).ToList();
+                    break;
+                case "Only phrasal verbs":
+                    words = wordsfromDB.Where(w => w.EnglishWord.Split().Length > 2).ToList()
                     .Where(w => w.EnglishWord.StartsWith("To ")).ToList();
-                flag = false;
+                    break;
+                case "Only verb \"Get\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To get ")).ToList();
+                    break;
+                case "Only verb \"Look\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To look ")).ToList();
+                    break;
+                case "Only verb \"Be\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To be ")).ToList();
+                    break;
+                case "Only verb \"Keep\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To keep ")).ToList();
+                    break;
+                case "Only verb \"Put\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To put ")).ToList();
+                    break;
+                case "Only verb \"Turn\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To turn ")).ToList();
+                    break;
+                case "Only verb \"Go\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To go ")).ToList();
+                    break;
+                case "Only verb \"Make\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To make ")).ToList();
+                    break;
+                case "Only verb \"Take\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
+                    break;
+                default:
+                    words = wordsfromDB;
+                    break;
             }
 
-            if (View.RadioButtonOnlyVerbGet.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To get ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbLook.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To look ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbBe.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To be ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbKeep.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To keep ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbPut.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To put ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbTurn.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To turn ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbGo.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To go ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbMake.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To make ")).ToList();
-                flag = false;
-            }
-
-            if (View.RadioButtonOnlyVerbTake.Checked)
-            {
-                words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
-                flag = false;
-            }
-
-            if (flag)
-                words = wordsfromDB;
-
-            // When the radiobutton is changed, all textboxes are cleared
+            // When the ComboBoxItem is changed, all textboxes are cleared
             View.EnglishWordForTest = "";
             View.TranslationIntoRussian = "";
             View.RussianhWordForTest = "";
