@@ -90,7 +90,7 @@
             // 
             this.textBoxToEnglish.BackColor = System.Drawing.Color.White;
             this.textBoxToEnglish.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxToEnglish.Location = new System.Drawing.Point(30, 285);
+            this.textBoxToEnglish.Location = new System.Drawing.Point(30, 305);
             this.textBoxToEnglish.Name = "textBoxToEnglish";
             this.textBoxToEnglish.ReadOnly = true;
             this.textBoxToEnglish.Size = new System.Drawing.Size(364, 26);
@@ -101,7 +101,7 @@
             // 
             this.textBoxFromRussian.BackColor = System.Drawing.Color.White;
             this.textBoxFromRussian.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxFromRussian.Location = new System.Drawing.Point(30, 235);
+            this.textBoxFromRussian.Location = new System.Drawing.Point(30, 255);
             this.textBoxFromRussian.Name = "textBoxFromRussian";
             this.textBoxFromRussian.ReadOnly = true;
             this.textBoxFromRussian.Size = new System.Drawing.Size(364, 26);
@@ -111,7 +111,7 @@
             // buttonShowEnglish
             // 
             this.buttonShowEnglish.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonShowEnglish.Location = new System.Drawing.Point(274, 315);
+            this.buttonShowEnglish.Location = new System.Drawing.Point(274, 335);
             this.buttonShowEnglish.Name = "buttonShowEnglish";
             this.buttonShowEnglish.Size = new System.Drawing.Size(120, 62);
             this.buttonShowEnglish.TabIndex = 23;
@@ -122,7 +122,7 @@
             // buttonRussianWord
             // 
             this.buttonRussianWord.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRussianWord.Location = new System.Drawing.Point(30, 315);
+            this.buttonRussianWord.Location = new System.Drawing.Point(30, 335);
             this.buttonRussianWord.Name = "buttonRussianWord";
             this.buttonRussianWord.Size = new System.Drawing.Size(120, 62);
             this.buttonRussianWord.TabIndex = 22;
@@ -133,7 +133,7 @@
             // buttonExit
             // 
             this.buttonExit.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit.Location = new System.Drawing.Point(488, 315);
+            this.buttonExit.Location = new System.Drawing.Point(488, 335);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(120, 62);
             this.buttonExit.TabIndex = 27;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 396);
+            this.ClientSize = new System.Drawing.Size(634, 421);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxWords);
             this.Controls.Add(this.buttonExit);

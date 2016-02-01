@@ -47,6 +47,12 @@ namespace Vocabulary.Presenters
                 View.ComboBoxWords.Items.Add("Only verb \"Go\"");
                 View.ComboBoxWords.Items.Add("Only verb \"Make\"");
                 View.ComboBoxWords.Items.Add("Only verb \"Take\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Run\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Throw\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Break\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Come\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Pull\"");
+                View.ComboBoxWords.Items.Add("Only verb \"Hang\"");
                 View.ComboBoxWords.SelectedIndex = 0;
             }
             catch (Exception ex)
@@ -142,6 +148,24 @@ namespace Vocabulary.Presenters
                     break;
                 case "Only verb \"Take\"":
                     words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
+                    break;
+                case "Only verb \"Run\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To run ")).ToList();
+                    break;
+                case "Only verb \"Throw\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To throw ")).ToList();
+                    break;
+                case "Only verb \"Break\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To break ")).ToList();
+                    break;
+                case "Only verb \"Come\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To come ")).ToList();
+                    break;
+                case "Only verb \"Pull\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To pull ")).ToList();
+                    break;
+                case "Only verb \"Hang\"":
+                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To hang ")).ToList();
                     break;
                 default:
                     words = wordsfromDB;
