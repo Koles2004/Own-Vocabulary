@@ -17,5 +17,6 @@ namespace Vocabulary.Views
         event EventHandler Delete;
         event EventHandler Translate;
         event EventHandler OpenTestForm;
+        event EventHandler OpenSuperTestForm;
     }
 }

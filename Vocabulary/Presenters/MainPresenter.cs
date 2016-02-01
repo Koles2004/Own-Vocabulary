@@ -24,6 +24,7 @@ namespace Vocabulary.Presenters
             View.Delete += OnDelete;
             View.Translate += OnTranslate;
             View.OpenTestForm += OnOpenTestForm;
+            View.OpenSuperTestForm += OnOpenSuperTestForm;
         }
 
         private void UpdateView()
@@ -199,6 +200,13 @@ namespace Vocabulary.Presenters
             var testPresenter = new TestPresenter(Model, new TestForm());
 
             ((Form)(testPresenter.View)).ShowDialog();
+        }
+
+        private void OnOpenSuperTestForm(object sender, EventArgs e)
+        {
+            var superTestPresenter = new SuperTestPresenter(Model, new SuperTestForm());
+
+            ((Form)(superTestPresenter.View)).ShowDialog();
         }
     }
 }

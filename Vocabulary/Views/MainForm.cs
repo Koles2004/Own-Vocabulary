@@ -84,5 +84,13 @@ namespace Vocabulary.Views
             if (OpenTestForm != null)
                 OpenTestForm(this, EventArgs.Empty);
         }
+
+        public event EventHandler OpenSuperTestForm;
+
+        private void OpenSuperTestFormHandler(object sender, EventArgs e)
+        {
+            if (OpenSuperTestForm != null)
+                OpenSuperTestForm(this, EventArgs.Empty);
+        }
     }
 }

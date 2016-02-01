@@ -45,6 +45,7 @@
             this.CloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonOpenTest = new System.Windows.Forms.Button();
+            this.superTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,7 +158,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
-            this.testToolStripMenuItem});
+            this.testToolStripMenuItem,
+            this.superTestToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(765, 24);
@@ -175,7 +177,7 @@
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.CloseToolStripMenuItem.Text = "Close";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
@@ -196,6 +198,13 @@
             this.buttonOpenTest.Text = "Open test";
             this.buttonOpenTest.UseVisualStyleBackColor = true;
             this.buttonOpenTest.Click += new System.EventHandler(this.OpenTestFormHandler);
+            // 
+            // superTestToolStripMenuItem
+            // 
+            this.superTestToolStripMenuItem.Name = "superTestToolStripMenuItem";
+            this.superTestToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.superTestToolStripMenuItem.Text = "SuperTest";
+            this.superTestToolStripMenuItem.Click += new System.EventHandler(this.OpenSuperTestFormHandler);
             // 
             // MainForm
             // 
@@ -246,5 +255,6 @@
         private System.Windows.Forms.ToolStripMenuItem CloseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.Button buttonOpenTest;
+        private System.Windows.Forms.ToolStripMenuItem superTestToolStripMenuItem;
     }
 }
