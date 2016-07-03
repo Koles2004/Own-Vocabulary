@@ -61,11 +61,19 @@ namespace Vocabulary.Presenters
 
         private void OnAdd(object sender, EventArgs e)
         {
+            IEnumerable<Word> words = Model.WordRepository.GetAll();
+
             var wordPresenter = new WordPresenter(Model, new WordForm());
             wordPresenter.View.EnglishWord = View.EnglishWord;
             
             if (((Form)wordPresenter.View).ShowDialog() == DialogResult.OK)
             {
+                if (words.Any(w => w.EnglishWord.ToUpper() == wordPresenter.View.EnglishWord.ToUpper()))
+                {
+                    MessageBox.Show("Such word is already in the vocabulary.", "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 try
                 {
                     Model.WordRepository.Add(new Word()
@@ -92,7 +100,7 @@ namespace Vocabulary.Presenters
                 return;
 
             // If there are several selected items, take the first
-            int selectedIndex = View.ListView.SelectedIndices[0];
+            var selectedIndex = View.ListView.SelectedIndices[0];
             Word word = (Word)View.ListView.Items[selectedIndex].Tag;
 
             var wordPresenter = new WordPresenter(Model, new WordForm());
@@ -100,8 +108,17 @@ namespace Vocabulary.Presenters
             wordPresenter.View.EnglishWord = word.EnglishWord;
             wordPresenter.View.Translation = word.Translation;
 
+            IEnumerable<Word> words = Model.WordRepository.GetAll();
+
             if (((Form)wordPresenter.View).ShowDialog() == DialogResult.OK)
             {
+                if (words.Any(w => w.EnglishWord.ToUpper() == wordPresenter.View.EnglishWord.ToUpper() &&
+                    wordPresenter.View.EnglishWord.ToUpper() != word.EnglishWord.ToUpper()))
+                {
+                    MessageBox.Show("Such word is already in the vocabulary.", "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 try
                 {
                     word.EnglishWord = wordPresenter.View.EnglishWord;
@@ -131,7 +148,7 @@ namespace Vocabulary.Presenters
             try
             {
                 // Run through the selected items list from bottom till top and remove them from the model and the view
-                for (int i = selectedIndices.Count - 1; i >= 0; i--)
+                for (var i = selectedIndices.Count - 1; i >= 0; i--)
                 {
                     Model.WordRepository.Delete(((Word)View.ListView.Items[selectedIndices[i]].Tag).Id);
                     View.ListView.Items.RemoveAt(selectedIndices[i]);
@@ -148,16 +165,12 @@ namespace Vocabulary.Presenters
 
         private void OnTranslate(object sender, EventArgs e)
         {
-            if (View.ListView.SelectedIndices.Count != 0)
-                View.ListView.SelectedIndices.Clear();
-
             if (View.EnglishWord.Length == 0)
                 return;
 
             try
             {
-                var words = Model.WordRepository.GetAll();
-                var wordsForSearch = words.ToList();
+                var wordsForSearch = Model.WordRepository.GetAll().ToList();
 
                 foreach (var wordForSearch in wordsForSearch.Where(wordForSearch => View.EnglishWord.ToLower() == wordForSearch.EnglishWord.ToLower()))
                 {
@@ -175,12 +188,14 @@ namespace Vocabulary.Presenters
             {
                 MessageBox.Show(ex.InnerException.Message);
                 MessageBox.Show("There is an error by getting a word.", "Something is wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // 
             }
         }
 
         public void SelectListViewItem(string str)
         {
+            if (View.ListView.SelectedIndices.Count != 0)
+                View.ListView.SelectedIndices.Clear();
+
             ListView.ListViewItemCollection toFindColection = View.ListView.Items;
 
             for (var i = 0; i < toFindColection.Count; i++)
