@@ -37,6 +37,8 @@
             this.buttonCorrect = new System.Windows.Forms.Button();
             this.buttonWrong = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelCountOfTranslations = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -139,11 +141,32 @@
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(400, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 18);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Translations:";
+            // 
+            // labelCountOfTranslations
+            // 
+            this.labelCountOfTranslations.AutoSize = true;
+            this.labelCountOfTranslations.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCountOfTranslations.Location = new System.Drawing.Point(512, 124);
+            this.labelCountOfTranslations.Name = "labelCountOfTranslations";
+            this.labelCountOfTranslations.Size = new System.Drawing.Size(0, 18);
+            this.labelCountOfTranslations.TabIndex = 40;
+            // 
             // TestFormWithKnownWords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 416);
+            this.Controls.Add(this.labelCountOfTranslations);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonWrong);
             this.Controls.Add(this.buttonCorrect);
@@ -175,5 +198,7 @@
         private System.Windows.Forms.Button buttonCorrect;
         private System.Windows.Forms.Button buttonWrong;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelCountOfTranslations;
     }
 }

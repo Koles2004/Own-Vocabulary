@@ -16,6 +16,7 @@ namespace Vocabulary.Views
 
         string EnglishWordForTest { get; set; }
         string TranslationIntoRussian { get; set; }
+        string CountOfTranslations { get; set; }
         
         event EventHandler Loaded;
         event EventHandler ChooseEnglishWord;

@@ -42,9 +42,7 @@ namespace Vocabulary.Presenters
                 View.ButtonCorrect.Enabled = false;
                 View.ButtonWrong.Enabled = false;
 
-                words = words.Where(w => w.Known != true).ToList();
-
-                int a = 5;
+                words = words.Where(w => w.Known != true).ToList();                
             }
             catch (Exception ex)
             {
@@ -93,10 +91,16 @@ namespace Vocabulary.Presenters
             long id = 0;
 
             id = words[index].Id;
+            var englishWord = words.Find(w => w.Id == id).EnglishWord;
 
-            View.EnglishWordForTest = words.Find(w => w.Id == id).EnglishWord;
+            // count the quantity of commas and plus 1 to get the result of translations
+            var translation = words.Find(w => w.EnglishWord == englishWord).Translation;
+            var count = 0;
+            count = translation.Count(f => f == ',') + 1;
+            View.CountOfTranslations = count.ToString();
 
-            View.TranslationIntoRussian = "";
+            View.EnglishWordForTest = englishWord;
+            View.TranslationIntoRussian = "";            
         }
 
         private void OnShowRussianWord(object sender, EventArgs e)

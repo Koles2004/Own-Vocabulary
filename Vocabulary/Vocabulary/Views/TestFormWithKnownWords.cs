@@ -31,7 +31,13 @@ namespace Vocabulary.Views
         {
             get { return textBoxToRussian.Text.Trim(); }
             set { textBoxToRussian.Text = value; }
-        }        
+        }
+
+        public string CountOfTranslations
+        {
+            get { return labelCountOfTranslations.Text; }
+            set { labelCountOfTranslations.Text = value; }
+        }
 
         public event EventHandler Loaded;
 

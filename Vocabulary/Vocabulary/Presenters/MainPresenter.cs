@@ -83,7 +83,8 @@ namespace Vocabulary.Presenters
                     {
                         Id = 0,
                         EnglishWord = wordPresenter.View.EnglishWord,
-                        Translation = wordPresenter.View.Translation                        
+                        Translation = wordPresenter.View.Translation,
+                        Known = false                  
                     });
 
                     count++;
@@ -131,6 +132,7 @@ namespace Vocabulary.Presenters
                 {
                     word.EnglishWord = wordPresenter.View.EnglishWord;
                     word.Translation = wordPresenter.View.Translation;
+                    word.Known = false;
                     
                     Model.WordRepository.Update(word);
                 }
