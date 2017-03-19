@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(460, 9);
+            this.label1.Location = new System.Drawing.Point(738, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 18);
             this.label1.TabIndex = 35;
@@ -56,7 +56,7 @@
             this.comboBoxWords.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWords.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxWords.FormattingEnabled = true;
-            this.comboBoxWords.Location = new System.Drawing.Point(420, 34);
+            this.comboBoxWords.Location = new System.Drawing.Point(698, 34);
             this.comboBoxWords.Name = "comboBoxWords";
             this.comboBoxWords.Size = new System.Drawing.Size(187, 26);
             this.comboBoxWords.TabIndex = 34;
@@ -65,7 +65,7 @@
             // buttonShowRussian
             // 
             this.buttonShowRussian.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonShowRussian.Location = new System.Drawing.Point(274, 119);
+            this.buttonShowRussian.Location = new System.Drawing.Point(515, 119);
             this.buttonShowRussian.Name = "buttonShowRussian";
             this.buttonShowRussian.Size = new System.Drawing.Size(120, 62);
             this.buttonShowRussian.TabIndex = 33;
@@ -91,7 +91,7 @@
             this.textBoxFromEnglish.Location = new System.Drawing.Point(30, 34);
             this.textBoxFromEnglish.Name = "textBoxFromEnglish";
             this.textBoxFromEnglish.ReadOnly = true;
-            this.textBoxFromEnglish.Size = new System.Drawing.Size(364, 26);
+            this.textBoxFromEnglish.Size = new System.Drawing.Size(605, 26);
             this.textBoxFromEnglish.TabIndex = 31;
             this.textBoxFromEnglish.TabStop = false;
             // 
@@ -102,7 +102,7 @@
             this.textBoxToRussian.Location = new System.Drawing.Point(30, 84);
             this.textBoxToRussian.Name = "textBoxToRussian";
             this.textBoxToRussian.ReadOnly = true;
-            this.textBoxToRussian.Size = new System.Drawing.Size(364, 26);
+            this.textBoxToRussian.Size = new System.Drawing.Size(605, 26);
             this.textBoxToRussian.TabIndex = 30;
             this.textBoxToRussian.TabStop = false;
             // 
@@ -122,7 +122,7 @@
             // 
             this.buttonWrong.Enabled = false;
             this.buttonWrong.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonWrong.Location = new System.Drawing.Point(274, 228);
+            this.buttonWrong.Location = new System.Drawing.Point(515, 228);
             this.buttonWrong.Name = "buttonWrong";
             this.buttonWrong.Size = new System.Drawing.Size(120, 62);
             this.buttonWrong.TabIndex = 37;
@@ -133,7 +133,7 @@
             // buttonExit
             // 
             this.buttonExit.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonExit.Location = new System.Drawing.Point(487, 325);
+            this.buttonExit.Location = new System.Drawing.Point(877, 326);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(120, 62);
             this.buttonExit.TabIndex = 38;
@@ -145,7 +145,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(400, 119);
+            this.label2.Location = new System.Drawing.Point(891, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 18);
             this.label2.TabIndex = 39;
@@ -155,7 +155,7 @@
             // 
             this.labelCountOfTranslations.AutoSize = true;
             this.labelCountOfTranslations.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCountOfTranslations.Location = new System.Drawing.Point(512, 124);
+            this.labelCountOfTranslations.Location = new System.Drawing.Point(997, 34);
             this.labelCountOfTranslations.Name = "labelCountOfTranslations";
             this.labelCountOfTranslations.Size = new System.Drawing.Size(0, 18);
             this.labelCountOfTranslations.TabIndex = 40;
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 416);
+            this.ClientSize = new System.Drawing.Size(1054, 416);
             this.Controls.Add(this.labelCountOfTranslations);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonExit);

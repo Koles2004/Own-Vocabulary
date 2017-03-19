@@ -60,69 +60,70 @@ namespace Vocabulary.Presenters
             View.ButtonStart.Enabled = true;
 
             var wordsfromDB = Model.WordRepository.GetAll().ToList();
+            var wordsKnownFalsefromDB = wordsfromDB.Where(w => w.Known != true).ToList();
 
             switch (View.ComboBoxWords.SelectedItem.ToString())
             {
                 case "Except verbs":
-                    words = wordsfromDB.Where(w => !w.EnglishWord.StartsWith("To ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => !w.EnglishWord.StartsWith("To ")).ToList();
                     break;
                 case "Only verbs":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To ")).ToList();
                     break;
                 case "Only phrasal verbs":
-                    words = wordsfromDB.Where(w => w.EnglishWord.Split().Length > 2).ToList()
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.Split().Length > 2).ToList()
                     .Where(w => w.EnglishWord.StartsWith("To ")).ToList();
                     break;
                 case "Only verb \"Get\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To get ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To get ")).ToList();
                     break;
                 case "Only verb \"Look\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To look ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To look ")).ToList();
                     break;
                 case "Only verb \"Be\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To be ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To be ")).ToList();
                     break;
                 case "Only verb \"Keep\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To keep ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To keep ")).ToList();
                     break;
                 case "Only verb \"Put\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To put ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To put ")).ToList();
                     break;
                 case "Only verb \"Turn\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To turn ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To turn ")).ToList();
                     break;
                 case "Only verb \"Go\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To go ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To go ")).ToList();
                     break;
                 case "Only verb \"Make\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To make ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To make ")).ToList();
                     break;
                 case "Only verb \"Take\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To take ")).ToList();
                     break;
                 case "Only verb \"Run\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To run ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To run ")).ToList();
                     break;
                 case "Only verb \"Throw\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To throw ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To throw ")).ToList();
                     break;
                 case "Only verb \"Break\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To break ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To break ")).ToList();
                     break;
                 case "Only verb \"Come\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To come ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To come ")).ToList();
                     break;
                 case "Only verb \"Pull\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To pull ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To pull ")).ToList();
                     break;
                 case "Only verb \"Hang\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("To hang ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("To hang ")).ToList();
                     break;
                 case "Only preposition \"In\"":
-                    words = wordsfromDB.Where(w => w.EnglishWord.StartsWith("In ")).ToList();
+                    words = wordsKnownFalsefromDB.Where(w => w.EnglishWord.StartsWith("In ")).ToList();
                     break;
                 default:
-                    words = wordsfromDB;
+                    words = wordsKnownFalsefromDB;
                     break;
             }
         }

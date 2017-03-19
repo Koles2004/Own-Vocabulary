@@ -100,7 +100,10 @@ namespace Vocabulary.Presenters
             View.CountOfTranslations = count.ToString();
 
             View.EnglishWordForTest = englishWord;
-            View.TranslationIntoRussian = "";            
+            View.TranslationIntoRussian = "";
+
+            if (View.ButtonCorrect.Enabled)
+                View.ButtonCorrect.Enabled = false;   
         }
 
         private void OnShowRussianWord(object sender, EventArgs e)
