@@ -55,7 +55,8 @@ namespace Vocabulary.Presenters
         {
             try
             {
-                words = Model.WordRepository.GetAll().ToList();
+                words = Model.WordRepository.GetAll().Where(w => w.Known != true).ToList();
+
                 View.ComboBoxWords.Items.Add("All words");
                 View.ComboBoxWords.Items.Add("Except verbs");
                 View.ComboBoxWords.Items.Add("Only verbs");
