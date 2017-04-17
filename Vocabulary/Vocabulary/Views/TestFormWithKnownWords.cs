@@ -39,6 +39,12 @@ namespace Vocabulary.Views
             set { labelCountOfTranslations.Text = value; }
         }
 
+        public string CountOfUnknownWords
+        {
+            get { return LabelCountOfUnknownWords.Text; }
+            set { LabelCountOfUnknownWords.Text = value; }
+        }
+
         public event EventHandler Loaded;
 
         private void LoadedHandler(object sender, EventArgs e)

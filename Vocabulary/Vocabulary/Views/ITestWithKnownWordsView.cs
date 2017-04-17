@@ -13,6 +13,7 @@ namespace Vocabulary.Views
         ComboBox ComboBoxWords { get; }
         Button ButtonCorrect { get; }
         Button ButtonWrong { get; }
+        string CountOfUnknownWords { get; set; }
 
         string EnglishWordForTest { get; set; }
         string TranslationIntoRussian { get; set; }

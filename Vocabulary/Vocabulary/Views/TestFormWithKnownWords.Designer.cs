@@ -39,6 +39,8 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelCountOfTranslations = new System.Windows.Forms.Label();
+            this.LabelCountOfUnknownWords = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -160,11 +162,32 @@
             this.labelCountOfTranslations.Size = new System.Drawing.Size(0, 18);
             this.labelCountOfTranslations.TabIndex = 40;
             // 
+            // LabelCountOfUnknownWords
+            // 
+            this.LabelCountOfUnknownWords.AutoSize = true;
+            this.LabelCountOfUnknownWords.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LabelCountOfUnknownWords.Location = new System.Drawing.Point(229, 375);
+            this.LabelCountOfUnknownWords.Name = "LabelCountOfUnknownWords";
+            this.LabelCountOfUnknownWords.Size = new System.Drawing.Size(0, 18);
+            this.LabelCountOfUnknownWords.TabIndex = 53;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(27, 370);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(196, 18);
+            this.label3.TabIndex = 52;
+            this.label3.Text = "Count of unknown words:";
+            // 
             // TestFormWithKnownWords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1054, 416);
+            this.Controls.Add(this.LabelCountOfUnknownWords);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelCountOfTranslations);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonExit);
@@ -200,5 +223,7 @@
         private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelCountOfTranslations;
+        private System.Windows.Forms.Label LabelCountOfUnknownWords;
+        private System.Windows.Forms.Label label3;
     }
 }

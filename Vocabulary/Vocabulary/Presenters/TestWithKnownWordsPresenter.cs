@@ -42,7 +42,9 @@ namespace Vocabulary.Presenters
                 View.ButtonCorrect.Enabled = false;
                 View.ButtonWrong.Enabled = false;
 
-                words = words.Where(w => w.Known != true).ToList();                
+                words = words.Where(w => w.Known != true).ToList();
+
+                View.CountOfUnknownWords = words.Count.ToString();
             }
             catch (Exception ex)
             {
@@ -78,6 +80,8 @@ namespace Vocabulary.Presenters
                 View.ComboBoxWords.Items.Add("Only verb \"Hang\"");
                 View.ComboBoxWords.Items.Add("Only preposition \"In\"");
                 View.ComboBoxWords.SelectedIndex = 0;
+
+                View.CountOfUnknownWords = words.Count.ToString();
             }
             catch (Exception ex)
             {
